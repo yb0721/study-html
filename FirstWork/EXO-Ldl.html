@@ -1,0 +1,42 @@
+<!doctype html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>EXO-L登录</title>
+      <style>
+            #all{width:400px;}
+          #all p a{text-decoration:none;color:black;margin-left:15px;}
+          #all p a:hover{color:#999;border:1px solid #999;}
+      </style>
+    </head>
+
+  <body>
+    <div id="all">
+      <div class="dl">
+        <h1>登陆</h1>
+        <p>请输入完成注册电子邮箱地址和密码</p>
+        <form method="post">
+            <p>
+              <label>电子邮箱地址:</label>
+              <input id="UserID" name="UserID" placeholder="电子邮箱地址" type="email" value="" />
+            </p>
+            <p style="margin-bottom:5px">
+              <label for="Password">密码:</label>
+              <input id="Password" name="Password" placeholder="密码" type="password" />
+            </p>
+            <input type="submit" value="登录" />
+            <input type="submit" value="取消" />
+            <p>
+              <input type="checkbox" id="KeepEmail" name="KeepEmail" value="Y"/>
+              <label class="keepText" for="KeepEmail">保存电子邮件</label>
+            </p>
+      </div>   
+          <p>ERROR : 请输入邮箱、密码</p>
+          <p>忘记账号信息了吗?<a href="https://membership.smtown.com/Account/Find" target="_blank">找回账号信息</a></p>
+          <p>
+            您不是MUSIC NATION SMTOWN的市民吗？<a href="EXO-Lzc.html" target="_self">注册</a>
+          </p>
+        </form>
+    </div>
+  </body>
+  </html>

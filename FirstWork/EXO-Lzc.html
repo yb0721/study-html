@@ -1,0 +1,297 @@
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title>EXO-L注册</title>
+			<style>
+				#all table tr td{line-height:40px;}
+			</style>
+			<script>
+				function check()
+				{
+					if(!checkuser()){return false;}
+					if(!checkpwd()){return false;}
+					if(!checkrepwd()){return false;}
+					if(!checkemail()){return false;}
+					if(!checkmobile()){return false;}
+					if(!checkbirth()){return false;}
+					//reture true;
+					}
+				function checkuser()
+				{
+					var reguser=/^[a-zA-Z0-9]{4,16}$/;
+					var user=document.getElementById("user").value;
+					if(reguser.test(user)==false)
+					{
+						alert("用户名由英文字母和数字组成");return false;
+						}
+						else
+					{return true;}
+					}
+					function checkpwd()
+				{
+					var regpwd=/^[a-zA-Z0-9]{4,10}$/;
+					var pwd=document.getElementById("pwd").value;
+					if(regpwd.test(pwd)==false)
+					{
+						alert("密码由英文字母和数字组成");return false;
+						}
+						else
+					{return true;}
+					}
+					function checkrepwd()
+				{
+					var regrepwd=/^[a-zA-Z0-9]{4,10}$/;
+					var repwd=document.getElementById("repwd").value;
+					var pwd=document.getElementById("pwd").value;
+					if(pwd!=repwd)
+					{
+						alert("第二次密码必须与第一次密码相同");return false;
+						}
+						else
+					{return true;}
+					}
+					
+					function checkemail()
+				{
+					var regemail=/^\w+@\w+\.[a-zA-Z0-9]{2,3}(.[a-zA-Z0-9]{2,3})?$/;
+					var email=document.getElementById("email").value;
+					if(regemail.test(email)==false)
+					{
+						alert("邮箱由英文字母和数字下划线@.组成");return false;
+						}
+					else
+					{return true;}
+					}
+					function checkmobile()
+				{
+					var regmobile=/^1\d{10}$/;
+					var mobile=document.getElementById("mobile").value;
+					if(regmobile.test(mobile)==false)
+					{
+						alert("手机号码数字组成,第一个数字为1");return false;
+						}
+					else
+					{return true;}
+					}
+					function checkbirth()
+				{
+					var regbirth=/^((19\d{2})|(20[0,1]\d))-(0?[1-9]|1[0-2])-(0?[1-9]|[1-2]\d|3[0-1])$/;
+					var birth=document.getElementById("birth").value;
+					if(regbirth.test(birth)==false)
+					{
+						alert("生日年份在1900-2019,格式为年-月-日");return false;
+						}
+					else
+					{return true;}
+					}
+			</script>
+		</head>
+
+
+		<body>
+			<div id="all">
+				<h3>注册</h3>
+				<table class="main" border="0" cellspacing="0" cellpadding="0">
+					<form action="EXO-Ldl.html" method="post" name="myform"onsubmit="return check()">
+					<tr>
+						<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td class="left">用户名：</td>
+							<td class="center"><input id="user" type="text" class="in"></td>
+							<td><div>用户名由英文字母和数字组成的4-16位字符，以字母开头</div></td>
+						</tr>
+						<tr>
+							<td class="left">密码：</td>
+							<td class="center"><input id="pwd" type="password" class="in"></td>
+							<td><div id="pwd_prompt"></div></td>
+						</tr>
+						<tr>
+							<td class="left">确认密码：</td>
+							<td class="center"><input id="repwd" type="password" class="in"></td>
+							<td><div id="repwd_prompt">密码由英文字母和数字组成的4-10位字符</div></td>
+						</tr>
+						<tr>
+							<td class="left">电子邮箱：</td>
+							<td class="center"><input id="email" type="text" class="in"></td>
+							<td><div id="email_prompt"></div></td>
+						</tr>
+						<tr>
+							<td class="left">手机号码：</td>
+							<td class="center"><input id="mobile" type="text" class="in"></td>
+							<td><div id="mobile_prompt"></div></td>
+						</tr>
+						<tr>
+							<td class="left">生日：</td>
+							<td class="center"><input id="birth" type="text" class="in"></td>
+							<td><div id="birth_prompt"></div></td>
+						</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+			<p>
+				<label>性别</label>
+				<input type="radio" value="1" name="rdo1"/>男
+				<input type="radio" value="2" name="rdo1"/>女
+			</p>
+			<p>
+				<label>同意接受邮件</label></p>
+			<p>
+				<input type="radio" value="1" name="rdo2"/>同意
+				<input type="radio" value="2" name="rdo2"/>不同意
+			</p>
+			<p>
+				<h4>EXO-L会员条款</h4>
+				<textarea cols="100" rows="15" readonly>
+					Chapter 1. (General Provisions) 
+					Article 1. (Purpose) 
+					“EXO-L” consists of members who love and support S.M. ARTIST – EXO and intends to share information on S.M. ARTIST – EXO and to support them together.
+					EXO Official Global Fanclub “EXO-L” invites global fans to join in and hereform General Provision defines rights, obligations and responsibilities of its members as s stated in this document. 
+					Article 2. (Member) 
+					1.“EXO-L” member means a person (hereinafter referred to as a “member”) who agreed with membership terms and conditions, completed a membership application form and obtained approval via online or mobile networks at 「EXO Official Global Fanclub “EXO-L”」.
+					2.All people who love and support EXO can be members of “EXO-L” without limitation.
+					3.To participate in activities of 「EXO Official Global Fanclub “EXO-L”」, a member should be verified by membership verification page or mobile membership information.
+					4.「EXO Official Global Fanclub “EXO-L”」 manages its members and "EXO-L" members observe rights, obligations and responsibilities as defined in the later part of this document.
+					Article 3. (Membership Registration and Approval) 
+					1.This membership terms and conditions (hereinafter referred to as the “terms and conditions”) should be applied any time in the case that a member (as defined in the Article 2) uses services provided by 「EXO Official Global Fanclub “EXO-L”」 and the member is considered as agreed to all regulations in the terms and conditions by reading them and clicking the “Agree” button for online membership registration.
+					2.「EXO Official Global Fanclub “EXO-L”」 approves membership registration by accepting membership application in accordance with a membership registration standard.
+					3.In the case that a member is considered to be an incapable person(such as a minor, a quasi-incompetent or an incompetent), or a legal representative of the member (such as parents or a guardian) expresses intention of refusal or objection, 「EXO Official Global Fanclub “EXO-L”」 can refuse participation of the member in all sorts of services, official activities and events. Yet exception can be made if the legal representative otherwise agreed differently.
+					4.A membership approval can be refused or suspended until the cause of suspension is resolved in the case that an applicant is relevant to the following details: 
+					A.In the case that he/she did not correctly complete all forms required for registration process including the membership application form;
+					B.In the case that it is found that the provided information of member is false or exaggerated to register as a member;
+					C.In the case that he/she used personal information of other person to register as a member
+					D.In the case that it is considered to be not acceptable as a member according to standards or the custom provided by 「EXO Official Global Fanclub “EXO-L”」.
+					Article 4. (Effective Period of Membership) 
+					1.The membership is valid for one year from officially appointed start date of annual membership (the start date will be notified later) after membership registration. However, the effective period of membership can be adjusted considering activities of S.M. ARTIST – EXO in the case that an unavoidable event is occurred. The adjustments and causes of the adjustments will be notified in advance on relevant websites (http://exo-l.smtown.com/ or S.M. ARTIST Official Homepage) in the case that the causes occurred.
+					2.After the effective period of membership expires, mails already sent to members and other mail services will not be re-sent.
+					Article 5. (Withdrawal) 
+					1.「EXO Official Global Fanclub “EXO-L”」 can terminate membership of a person who did an unreasonable act or committed acts prohibited by the Article 4 of the Chapter 2, and with the termination of membership, every right and authority of the member will be nullified. In principle, 「EXO Official Global Fanclub “EXO-L”」 will send a prior notification of the date and cause of the termination to an e-mail address or other destination designated by the member or post them on the official website (the notification will be delivered through information provided by the member, and in the case that the destination cannot be identified because the member deleted his/her own information, liability of non-delivery is on the member).
+					2.A member can request termination of 「EXO Official Global Fanclub “EXO-L”」 membership on the fanclub website in the case that he/she wants to do by providing necessary information and a reason for termination to 「EXO Official Global Fanclub “EXO-L”」 completed a termination form. All exclusive services of benefit for the member will be ceased, and in some cases, the services can be withdrawn and shall be returned..
+					3.Liability of payment will survive the membership termination in the case that such a liability including payment for merchandise specially offered to the members and other service fees payable to 「S.M. ARTIST Official Global Fanclub」 exists even after the time of membership termination.
+					Article 6. (Foreign Members)
+					1.Only foreigners who completed a membership application form and obtained approval via online or mobile networks can become members of 「EXO Official Global Fanclub “EXO-L”」.
+					2.The registration procedure and all regulations in these terms and conditions are equally applied to both domestic and foreign members, and foreign members will equally participate in the fanclub activities according to guides and instructions of 「EXO Official Global Fanclub “EXO-L”」 as same as domestic members.
+					Chapter 2. (Agreement and Limitation) 
+					Article 1. (Information Provision)
+					「EXO Official Global Fanclub “EXO-L”」 provides necessary information on S.M. ARTIST - EXO and S.M. ARTIST Official Global Fanclub through relevant delivery methods depending on the situation including group e-mail, posting on websites related to the fanclub (official S.M. ARTIST website, communities, etc.) and text messages.
+					Article 2. (Membership Benefits) 
+					1.A member of 「EXO Official Global Fanclub “EXO-L”」 is eligible to receive the following benefits: 
+					A.A Congratulation message card for online registration to 「EXO Official Global Fanclub “EXO-L”」 (provided after start date of annual membership);
+					B.Authority to use 「EXO Official Global Fanclub “EXO-L”」 mobile application;
+					C.Preferential right to attend to open broadcast programs and events which S.M. ARTIST – EXO participates in; 
+					-An online application webpage will be established for the events,
+					-Members can attend to the events in the case that the broadcasting station or the host holding the event consented to, and
+					-For overseas events, limited admission can be provided depending on agreed conditions.
+					D.A fanclub homepage (notice board for STAFF DIARY, FROM EXO and EVENTS) for information delivery service and Community of 「EXO Official Global Fanclub “EXO-L”」 (;
+					E.Monthly online events featuring S.M. ARTIST – EXO. However, it can be adjusted depending on the schedule of the artist and other circumstances);
+					F.Opportunities to join in fanclub tours for overseas concerts of S.M. ARTIST – EXO. However, the applicant bears his/her own expenses entirely. In the case that the number of applicants exceeds maximum number, participants can be decided by lottery. In the case that the number of applicants is insufficient, the tour can be canceled.);
+					G.Opportunities to purchase 「EXO Official Global Fanclub “EXO-L”」 official goods as released;
+					H.Opportunities to participate in offline events with S.M. ARTIST – EXO, depending on availability in schedule); and
+					I.Opportunities to participate in national video parties and local meetings of 「EXO Official Global Fanclub “EXO-L”」. However, the events will be successively held in each region depending on situation and circumstance).
+					※Additional special benefits will be provided (in preparation).
+					2.Durations and expenses of benefits can be adjusted considering inevitable circumstances including the number of participants and location rental and additional charges can be incurred.
+					Article 3. (Obligations of Members) 
+					1.Members should observe instructions and frequently check notifications on the website (http://exo-l.smtown.com or S.M. ARTIST Official Homepage) to avoid facing any disadvantages.
+					2.Members should respect supporters who represent the fans and follow instructions and guides of the supporters to avoid any problem in the case of group activities
+					3.A member manages personal information including member identification number and password under his/her own responsibility and admits that 「EXO Official Global Fanclub “EXO-L”」 will not have any responsibility for damages arising from fault of use, misuse of third parties and any other matter due to lack of management.
+					4.A member cannot transfer, lend or hand over his/her member identification number or password to a third party.
+					5.In the case that a change is occurred in personal information (including name, residence or e-mail address), the member is advised to modify the personal information on relevant websites to avoid any disadvantage.
+					6.「EXO Official Global Fanclub “EXO-L”」 will not assume any responsibility in the case that a member could not receive mails or notification of any kind by neglecting the responsibility provided in the above provision.
+					Article 4 (Prohibitions) 
+					By joining in 「EXO Official Global Fanclub “EXO-L”」, a member is prohibited to:
+					A.reproduce, sell, publish, broadcast or unlawfully or unfairly use any information, article, sentence, audio, video, illustration and others (hereinafter referred to as “intellectual properties”) related to S.M. ARTISTS distributed by 「EXO Official Global Fanclub “EXO-L”」 with exceeding the range of personal use allowed in the copyright law, trademark law and other related regulations;
+					B.infringe third party property rights, privacy, portrait rights, name rights, publicity rights and other rights via recording audio and video of performances or other activities of S.M. ARTISTS (All intellectual property rights of S.M. ARTISTS belong to S.M. ENTERTAINMENT. If imposed to any infringement, legal sanctions and penalties will be charged.);
+					C.slander, damage or do any harm on the reputation or credibility of S.M. ENTERTAINMENT, ARTISTS of S.M. ENTERTAINMENT or any third party without any reasonable cause;
+					D.resale, transfer, lend or hand over membership cards, tickets, goods and any other rights given exclusively to members as membership benefits to any third party through the internet or any other way;
+					E.force S.M. ARTISTS to have a meeting, personally make a contact or request contact information or visit of the ARTISTS to S.M. ENTERTAINMENT;
+					F.engage in commercial activities for the profit of his/her own or a third party using 「S.M. ARTIST Official Global Fanclub」 or the ARTISTS or engage in other activities to prepare such commercial activities (hereinafter referred to as “business activities”);
+					G.falsely represent 「S.M. ARTIST Official Global Fanclub」 or the ARTISTS or receive money or valuables by misusing the name of the fanclub or the ARTISTS;
+					H.damage other members of 「S.M. ARTIST Official Global Fanclub」 or any third party through abusive language or violence acts;
+					I.engage in premature election campaigns, similar activities or other activities prohibited by the Public Official Election Act through 「S.M. ARTIST Official Global Fanclub」
+					J.engage in religious activities including propagation and other aberrant activities out of the proper purpose of the fanclub including establishment of a religious group, participation in religious activities (propagation) and organization of religious assemblies misusing 「S.M. ARTIST Official Global Fanclub」;
+					K.breach regulations other than that provided in the above provisions, harm traditional customs or disrupt operation of 「S.M. ARTIST Official Global Fanclub」;
+					L.violate membership regulations of the fanclub or be concluded by supporters (executives) that it is impossible to maintain his/her position as a member (including the case that the member uses false personal information);
+					M.personally contact with persons related to S.M. ARTISTS (including entertainers of the company, managers and employees of the company, family members, acquaintances and others), request or force to have a meeting with them
+					N.give or offer valuable considerations, money or other excessive services to the persons in the above provision.
+					Article 5. (Amendment of the Agreement) 
+					1.「EXO Official Global Fanclub “EXO-L”」 can enact or amend this agreement considering all circumstances, and should give a prior notification on the enacted or amended provisions through the websites (http://exo-l.smtown.com or S.M. ARTIST Official Homepage) in the case that they become effective. In the case that enactment or amendment is ordered by relevant regulations or institutions such as the Fair Trade Commission, a court and other authoritative institutions, a decision of the institution can be posted to enacted or amended provisions.
+					2.In the case that there is not enough time or any reasonable reason which make it impossible to give a prior notification in the situation defined in the above provision, 「EXO Official Global Fanclub “EXO-L”」 should give a notification to the members as soon as possible after the enactment or amendment according to the Article 1 of the Chapter 2 of this terms and conditions as an exception.
+					Article 6. (Consultation) 
+					In the case that a dispute occurred on matters not provided in this agreement or on interpretations of the agreement, it should be resolved by consultation between the members and 「EXO Official Global Fanclub “EXO-L”」 and between the members and discussion of representatives(supporters).
+					Article 7. (Inquiry)
+					Members should frequently check notification and the fanclub will not assume any responsibility on disadvantages due to not checking the notices. Notifications and inquiries on 「EXO Official Global Fanclub “EXO-L”」 will be posted on the following websites:
+					[Official ARTIST Homepages] 
+					http://exo-k.smtown.com/
+					http://exo-m.smtown.com/
+					[Official Fanclub Homepages] 
+					http://exo-l.smtown.com/
+					http://fanclub.smtown.com/
+					* Notices will be also given by the methods otherwise agreed.
+					Chapter 3. (Miscellaneous)
+					Article 1. (Change and Suspension of Services)
+					1.Membership benefits and some services of 「EXO Official Global Fanclub “EXO-L”」 can be changed, suspended or terminated due to unavoidable reasons including the problems occurred to the company or ARTISTS of the company as defined in the following provisions and unexpected issues including operational conditions of the fanclub. In principle, 「EXO Official Global Fanclub “EXO-L”」 should give a prior notification on the changes and suspensions of services and their reasons on relevant websites(http://exo-l.smtown.com/ or S.M. ARTIST Official Homepage), and in the case that it is impossible to give a prior notification by an unavoidable reason, the fanclub should immediately give the notification after the reason is resolved. 
+					A.the services cannot be continued due to closure of business, bankruptcy, composition, cancelation of business or cessation;
+					B.an ARTIST has a personal reason(including legal status, military service, study abroad, education, long term stay abroad);
+					C.an action(including an administrative measure or a judgment of a court or other) is ordered according to a relevant regulation or with a legal force;
+					D.it is impossible or considerably difficult to provide agreed services due to changes in society or economy;
+					E.contractual relationship is changed or terminated (expired or canceled) between the company and its ARTIST;
+					F.an ARTIST refused or objected to provide services;
+					G.occurrence of natural disaster or other irresistible cause
+					H.confidentiality and agility are needed for entrance to overseas markets or operation of specific project of the ARTISTS; or
+					I.other critical reason is occurred.
+					Article 2. (Dissolution) 
+					1.「EXO Official Global Fanclub “EXO-L”」 will be dissolved in the case that it is considered to be impossible or considerably difficult to continue operation of the fanclub due to conditions of the ARTISTS or reasons defined in each provision of the above article.
+					2.「EXO Official Global Fanclub “EXO-L”」 will give a notification on the date and reason of dissolution via websites (http:// exo-l.smtown.com or S.M. ARTIST Official Homepage) in the case that it is dissolved.
+					Article 3. (Compensation for Damages)
+					A member should compensate damages occurred to 「EXO Official Global Fanclub “EXO-L”」 or any third party in relation with his/her use of S.M. Official Global Fanclub.
+					Article 4. (Indemnification)
+					「EXO Official Global Fanclub “EXO-L”」 will not assume any responsibility on damages occurred to members or disputes between members, or between a member and a third party, unless such damages or disputes occurred due to a reason attributable to the main body of operation such as a force majeure, enactment and amendment of related regulations and modification of related policy in relation of the use of 「EXO Official Global Fanclub “EXO-L”」.
+					Chapter 4. (ARTIST Fanclub Supporters) 
+					Article 1. (Supporters)
+					For the purpose of this article, the supporters mean a group of people which leads and represents members belonging to each annual membership of 「S.M. ARTIST Official Global Fanclub」, and are divided into Seoul Capital Area supporters which represent 「S.M. ARTIST Official Global Fanclub」 and local supporters who represent members of each region and manage every matter occurred in each region.
+					Article 2. (Selection of Supporters)
+					1.The number of representative supporters, Seoul Capital Area supporters and local supporters can be proportional to the number of members of each region.
+					2.Provisional supporters are selected among applicants who belong to each annual membership through initial document screening and second interview, and the provisional supporters are finally appointed as regular supporters by managers and working staffs of the fanclub after certain provisional period passed.
+					Article 3. (Rights and Obligations of Supporters)
+					1.Representative supporters have an authority to decide operational issues of 「S.M. ARTIST Official Global Fanclub」 on behalf of whole members after gathering opinions from the members. Thus the representative supporters should manage and lead Seoul Capital Area supporters and local supporters and listen to opinions of the members.
+					2.Local supporters of each region generally represent every fanclub activity in their region, submit opinions on local events gathered from local members and operate 「S.M. ARTIST Official Global Fanclub」 in their region by dealing with every issue after consultation of all supporters.
+					Article 4. (Rules of Supporters)
+					Supporters elected in the Seoul Capital Area and in each region should observe the rules of supporters on which they signed.
+					Article 5. (Term of Supporters)
+					1.The term of supporters starts when all supporters are announced on the official homepage, and after a general meeting of all supporters, they assume all rights and responsibilities provided to the supporters until the supporters of next year are appointed.
+					2.Activities of Supporters 
+					A.A cancelation of membership will be effective in the case that more than half of the supporters agree to the cancelation of membership in a supporters meeting.
+					B.Articles in these rules of supporters can be amended in the case that more than 70% of the supporters agree to the amendment in a supporters meeting.
+					C.General conditions of 「EXO Official Global Fanclub “EXO-L”」 agreement will be concluded in the names of representative supporters.
+					D.Other issues should be examined and decided considering characteristics of each issue.
+					Article 6. (Withdrawal from Supporters)
+					1.In the case that a supporter has an intention of withdrawal, the person should express the intention to the person in charge of the fanclub at least a month before the withdrawal not to affect activities of other supporters.
+					2.The supporter should post a withdrawal notification specifying a reason of withdrawal so that the members can see the notification, and after the post, all rights given to the supporter will be voided. In the case that a supporter withdraw or is expelled due to shameful incident, the supporter will be expelled from the membership permanently.
+					3.In the case that a supporter withdraws before the term of supporters expires, all of supplies provided to the supporter should be returned to the fanclub.
+					Article 7. (Posting Personal Information of Supporters Applicants)
+					「EXO Official Global Fanclub “EXO-L”」 can release names, ages, careers and region of applicants to the fanclub members in the case of selecting regular supporters according to the Article 2 of the Chapter 4, and each applicant is considered to agree to release the above mentioned information by submitting a supporter application.
+					Article 8. (Amendment of Rules of Supporters)
+					Articles in these rules of supporters can be amended, supplemented, modified or deleted after a prior notification to applicants in the case that the changes occur according to the Article 4 of the Chapter 4 considering operational conditions of 「EXO Official Global Fanclub “EXO-L”」.
+					Article 9. (Consultation)
+					In the case that a dispute occurred on matters not provided in these rules or on interpretations of the rules, it should be resolved by consultation between supporters and 「EXO Official Global Fanclub “EXO-L”」.
+					These terms and conditions apply to members of 「EXO Official Global Fanclub “EXO-L”」 from May 13, 2014.
+				</textarea>
+			</p>
+			<p>
+				<label>同意EXO-L会员条款。</label></p>
+			<p>
+				<input type="radio" value="1" name="rdo3"/>同意
+				<input type="radio" value="2" name="rdo3"/>不同意
+			</p>
+			<table>
+				<tr>
+					<td class="left">&nbsp;</td>
+					<td class="center"><input name="" type="image" src="image/logo2.jpg"></td>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+			</form>
+			</div>
+		</body>
+	</html>

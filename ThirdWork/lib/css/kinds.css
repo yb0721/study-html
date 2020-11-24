@@ -1,0 +1,45 @@
+#main-content .wrap-content {
+    padding: 0 0 50px;
+}
+article {
+    background: #ffffff; 
+    color: #3F3F3F;
+}
+article:after, article:before {
+    clear: both; 
+    content: '\0020'; 
+    display: block; 
+    visibility: hidden; 
+    width: 0; 
+    height: 0;
+}
+article img { 
+    height: 310px;
+    width: 600px; 
+    border: none;
+    margin-left: 10%; 
+}
+article .art-content {
+    padding: 40px 60px 60px 100px;
+}
+.t-center p {
+    text-indent: 2em;
+}
+h3 {
+    font-size: 20px;
+    line-height: 20px;
+}
+@media (max-width: 1200px) and (min-width: 768px){
+	article .art-content{padding: 40px 50px 0;}
+}
+@media (max-width: 1200px){
+    article {
+        margin-bottom: 30px;
+    }
+	article .art-content {
+        padding: 30px 30px 0;
+    }
+    .zerogrid .col-1-2 {
+        width:100%;
+    }
+}

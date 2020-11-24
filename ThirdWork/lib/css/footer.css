@@ -1,0 +1,32 @@
+footer {
+    background: #1A1C1E;
+    font-size: 18px;
+}
+.copyright {
+    background: #151515;
+    color: #999;
+}
+.copyright .wrapper {
+    padding: 35px;
+    text-align: center;
+}
+span {
+    font-family: "华文行楷";
+}
+.copyright ul.quick-link {
+    list-style: none;
+    padding-top: 5px;
+}
+.copyright ul.quick-link li {
+    display: inline-block;
+    font-family: "华文行楷";
+}
+@media all and (max-width: 768px){
+	.copyright {
+        text-align: center;
+    }
+	.copyright ul.quick-link {
+        float: none;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>甜品屋</title>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css">
+
+        <link rel = "stylesheet" href = "lib/css/header.css">
+        <link rel = "stylesheet" href = "lib/css/container.css">
+        <link rel = "stylesheet" href = "lib/css/house.css">
+        <link rel = "stylesheet" href = "lib/css/footer.css">
+
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=AiGFh49D95Hvr4rqsoWGk3xKQmX9n44C"></script>
+    </head>
+    
+
+    <body>
+        <div id = "all">
+            <div class = "header">
+                <div id = "cssmenu">
+                    <ul>
+                        <li><a href='contact.html'><span>首页</span></a></li>
+                        <li><a href='contact.html'><span>简介</span></a></li>
+                        <li class = 'has-sub'><a href='kinds.html'><span>种类</span></a>
+                            <ul>
+                                <li><a href='kinds.html'><span>中式糕点</span></a></li>
+                                <li><a href='kinds.html'><span>西式甜点</span></a></li>
+                                <li><a href='kinds.html'><span>港式甜点</span></a></li>
+                                <li><a href='kinds.html'><span>日式甜点</span></a></li>
+                                <li><a href='kinds.html'><span>台式甜品</span></a></li>
+                                <li><a href='kinds.html'><span>餐后甜点</span></a></li>
+                            </ul>
+                        </li>
+                        <li class = "active"><a href='House.html'><span>甜点屋</span></a></li>
+                        <li><a href='other.html'><span>其他</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <section id = "container">
+                <div class = "wrap-container">
+                    <div id = "main-content">
+                        <div class = "art-header">
+                            <h1 class = "entry-title">Different kinds of dessert shops</h1>
+                        </div>
+                        <div class = "kinds">
+                            <h2>Chinese Pastry</h2>
+                            <div id = "cmap"></div>
+                            <h3>稻香村</h3>
+                            <p>自公元1895年金陵人郭玉生落户前门观音寺，
+                                到1983年老掌柜刘振英勇担重任、小胡同里艰难复业，
+                                再到现任掌门人毕国才继往开来、开辟发展新篇章，
+                                “北京稻香村”已在京城薪火相传悠悠百年。</p>
+                            <p>
+                                地址：北京市朝阳区和平街街道和平里西街21号
+                            </p>
+                        </div>
+                        <div class = "kinds">
+                            <h2>Dessert</h2>
+                            <div id = "dmap"></div>
+                            <h3>Lost Bakery</h3>
+                            <p>Lost Bakery被称为法式面包店和咖啡店，是法国的黑麦面包，
+                                结合了老式的法国黑麦面包，例如“ Tourte de Meule”和传
+                                统的法式长棍面包。传统的法式长棍面包是用酸面团制成的，
+                                需要48小时的发酵才能进入烤箱。</p>
+                            <p>
+                                地址：上海市静安区巨鹿路758号5号楼3楼
+                            </p>
+                        </div>
+                        <div class = "kinds">
+                            <h2>HK Dessert</h2>
+                            <div id = "hmap"></div>
+                            <h3>许留山</h3>
+                            <p>HuiLauShan，是一间香港连锁式甜品店，专门售卖甜汤、甜品
+                                和小食，以芒果为主要材料。1990年推出鲜果甜品，1992年推
+                                出的甜品“芒果西米捞”大受欢迎，其后以特许经营方式拓展业务，
+                                成为现时一家港式鲜果甜品店的著名品牌。</p>
+                            <p>
+                                地址：上海市静安区大田路博华广场B2
+                            </p>
+                        </div>
+                        <div class = "kinds">
+                            <h2>Japanese Dessert</h2>
+                            <div id = "jmap"></div>
+                            <h3>宝屋日料</h3>
+                            <p>宝屋是一家开业不久的日料店，简洁清新日式风装修精致日料餐厅，
+                                日式枯山水造景露台 别有情趣，引入西餐做法与理念 带来创意日料，
+                                每一道料理都非常精致，老板非常具备匠人精神，把用心做料理放在
+                                第一位。</p>
+                            <p>
+                                地址：北京市朝阳区三里屯南路通盈中心三层
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="copyright">
+                    <div class="zerogrid wrapper">
+                        &copy; <span>信息图片均摘自百度</span>
+                        <ul class="quick-link">
+                            <li>似腻还成爽，才凝又欲飘;玉来盘底碎，雪到口边销。</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+    <!-- 调用地图 -->
+    <script src = "lib/js/map.js"></script>
+</html>
